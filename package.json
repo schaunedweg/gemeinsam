@@ -1,7 +1,7 @@
 {
   "name": "gemeinsam",
   "version": "0.1.0",
-  "homepage": "https://schaunedweg.github.io/gemeinsam.github.io",
+  "homepage": "https://gemeinsam.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
