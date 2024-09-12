@@ -1,26 +1,21 @@
+import { useTranslation, Trans } from 'react-i18next'
+
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import ImageList from '@mui/material/ImageList'
-import ImageListItem from '@mui/material/ImageListItem'
-import Link from '@mui/material/Link'
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
-import { useTranslation } from 'react-i18next'
 
-const flyers = [
-    '/gemeinsam/flyers/Demo26_v1.PNG',
-    '/gemeinsam/flyers/Demo26_v2.PNG',
-    '/gemeinsam/flyers/Demo26_v3.PNG',
-    '/gemeinsam/flyers/Demo26_v4.PNG',
-    '/gemeinsam/flyers/Demo26_v5.PNG',
-    '/gemeinsam/flyers/Demo26_v6.PNG',
-]
+import Flyers from '../components/Flyers'
+import Footer from '../components/Footer'
+import Languages from '../components/Languages'
 
 const MainPage = () => {
     const { t } = useTranslation()
+
     return (
         <div>
-            <Box sx={{ py: { xs: 3, sm: 6 } }}>
+            <Languages />
+            <Box sx={{ py: { xs: 2, sm: 4 } }}>
                 <Stack direction="column" spacing={{ xs: 2, sm: 4 }}>
                     <Typography
                         sx={{
@@ -37,7 +32,7 @@ const MainPage = () => {
                             fontSize: { xs: '1.5rem', sm: '3rem' },
                         }}
                     >
-                        {t('subtitle')}
+                        <Trans i18nKey="subtitle" components={{ s: <s /> }} />
                     </Typography>
                     <Typography
                         variant="body1"
@@ -68,38 +63,12 @@ const MainPage = () => {
                         variant="body1"
                         sx={{ fontFamily: 'Inconsolata' }}
                     >
-                        {t('text')}
+                        <Trans i18nKey="text" />
                     </Typography>
-                    <ImageList cols={2}>
-                        {flyers.map((item) => (
-                            <ImageListItem key={item}>
-                                <img
-                                    srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                    src={`${item}?w=164&h=164&fit=crop&auto=format`}
-                                    alt={'demo flyer'}
-                                    loading="lazy"
-                                />
-                            </ImageListItem>
-                        ))}
-                    </ImageList>
+                    <Flyers />
                 </Stack>
             </Box>
-            <Stack direction="row" spacing={1}>
-                <Typography variant="caption">
-                    <Link
-                        target="_blank"
-                        href="https://icons8.com/icon/9033/strike"
-                    >
-                        Protest
-                    </Link>{' '}
-                    favicon by{' '}
-                    <Link target="_blank" href="https://icons8.com">
-                        Icons8
-                    </Link>
-                </Typography>
-                <Box flexGrow={1} />
-                <Typography variant="caption">Website by Le</Typography>
-            </Stack>
+            <Footer />
         </div>
     )
 }

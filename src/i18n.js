@@ -1,7 +1,9 @@
-import de from './locales/de/translation.json'
-
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
+
+import de from './locales/de/translation.json'
+import en from './locales/en/translation.json'
+import { defaultLocale } from './constants'
 
 i18n.use(initReactI18next) // passes i18n down to react-i18next
     .init({
@@ -10,9 +12,10 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
         // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
         resources: {
             de: { translation: de },
+            en: { translation: en },
         },
-        lng: 'de', // if you're using a language detector, do not define the lng option
-        fallbackLng: 'de',
+        // lng: 'de', // if you're using a language detector, do not define the lng option
+        fallbackLng: defaultLocale,
         interpolation: {
             escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
         },

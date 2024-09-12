@@ -1,4 +1,3 @@
-// import logo from "./logo.svg";
 import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 import MainPage from './pages/MainPage'
@@ -11,7 +10,14 @@ import {
 
 import './App.css'
 
-let theme = createTheme()
+let theme = createTheme({
+    palette: {
+        primary: {
+            main: '#9f4797',
+        },
+    },
+})
+
 theme = responsiveFontSizes(theme)
 
 function App() {
