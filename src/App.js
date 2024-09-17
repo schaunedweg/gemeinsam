@@ -8,6 +8,8 @@ import {
     ThemeProvider,
 } from '@mui/material/styles'
 
+import Languages from './components/Languages'
+
 import './App.css'
 
 let theme = createTheme({
@@ -26,6 +28,8 @@ function App() {
             <CssBaseline />
             <Container>
                 <ThemeProvider theme={theme}>
+                    <Languages />
+
                     <MainPage />
                 </ThemeProvider>
             </Container>

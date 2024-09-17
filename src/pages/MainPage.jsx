@@ -7,14 +7,12 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
 
 import Flyers from '../components/Flyers'
 import Footer from '../components/Footer'
-import Languages from '../components/Languages'
 
 const MainPage = () => {
     const { t } = useTranslation()
 
     return (
         <div>
-            <Languages />
             <Box sx={{ py: { xs: 2, sm: 4 } }}>
                 <Stack direction="column" spacing={{ xs: 2, sm: 4 }}>
                     <Typography
@@ -23,7 +21,7 @@ const MainPage = () => {
                             fontSize: { xs: '3rem', sm: '6rem' },
                         }}
                     >
-                        {t('title')}
+                        {t('main.title')}
                     </Typography>
                     <Typography
                         sx={{
@@ -32,13 +30,16 @@ const MainPage = () => {
                             fontSize: { xs: '1.5rem', sm: '3rem' },
                         }}
                     >
-                        <Trans i18nKey="subtitle" components={{ s: <s /> }} />
+                        <Trans
+                            i18nKey="main.subtitle"
+                            components={{ s: <s /> }}
+                        />
                     </Typography>
                     <Typography
                         variant="body1"
                         sx={{ fontFamily: 'Inconsolata' }}
                     >
-                        {t('invite')}
+                        {t('main.invite')}
                     </Typography>
                     <Typography
                         variant="h4"
@@ -46,7 +47,7 @@ const MainPage = () => {
                     >
                         <PriorityHighIcon />
                         <PriorityHighIcon />
-                        {t('demo')}
+                        {t('main.demo')}
                         <PriorityHighIcon />
                         <PriorityHighIcon />
                     </Typography>
@@ -54,16 +55,16 @@ const MainPage = () => {
                         variant="h5"
                         sx={{ fontFamily: 'Archivo Black' }}
                     >
-                        {t('datetime')}
+                        {t('main.datetime')}
                     </Typography>
                     <Typography variant="h6" sx={{ fontFamily: 'Poppins' }}>
-                        {t('location')}
+                        {t('main.location')}
                     </Typography>
                     <Typography
                         variant="body1"
                         sx={{ fontFamily: 'Inconsolata' }}
                     >
-                        <Trans i18nKey="text" />
+                        <Trans i18nKey="main.text" />
                     </Typography>
                     <Flyers />
                 </Stack>
