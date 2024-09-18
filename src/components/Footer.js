@@ -5,7 +5,12 @@ import Typography from '@mui/material/Typography'
 
 const Footer = () => {
     return (
-        <Stack direction="row" spacing={1}>
+        <Stack
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            sx={{ height: '40px' }}
+        >
             <Typography variant="caption">
                 <Link
                     target="_blank"
