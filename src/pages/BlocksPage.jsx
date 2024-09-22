@@ -10,7 +10,7 @@ const BlocksPage = () => {
     const { t } = useTranslation()
 
     return (
-        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2 }}>
+        <Box sx={{ py: { xs: 2, sm: 4 }, pb: 4 }}>
             <Stack direction="column" spacing={{ xs: 2, sm: 3 }}>
                 <PageTitle />
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>

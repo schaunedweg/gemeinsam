@@ -18,8 +18,6 @@ import HomePage from './pages/HomePage'
 import LegalAidPage from './pages/LegalAidPage'
 import ProgramPage from './pages/ProgramPage'
 
-import Footer from './components/Footer'
-
 import './App.css'
 
 let theme = createTheme({
@@ -42,28 +40,23 @@ function App() {
                     <Toolbar />
                     <Routes>
                         <Route
-                            exact
                             path="gemeinsam/program"
                             element={<ProgramPage />}
                         />
                         <Route
-                            exact
                             path="gemeinsam/demo-blocks"
                             element={<BlocksPage />}
                         />
                         <Route
-                            exact
                             path="gemeinsam/demo-consensus"
                             element={<ConsensusPage />}
                         />
                         <Route
-                            exact
                             path="gemeinsam/legal-aid"
                             element={<LegalAidPage />}
                         />
                         <Route path="*" element={<HomePage />} />
                     </Routes>
-                    <Footer />
                 </Container>
             </ThemeProvider>
         </div>

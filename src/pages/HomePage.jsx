@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
 
 import Flyers from '../components/Flyers'
+import Footer from '../components/Footer'
 import PageTitle from '../components/PageTitle'
 
 const HomePage = () => {
@@ -38,6 +39,7 @@ const HomePage = () => {
                     />
                 </Typography>
                 <Flyers />
+                <Footer />
             </Stack>
         </Box>
     )
