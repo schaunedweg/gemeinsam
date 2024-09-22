@@ -10,7 +10,7 @@ const ProgramPage = () => {
     const { t } = useTranslation()
 
     return (
-        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2, height: 'calc(100% - 104px)' }}>
+        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2 }}>
             <Stack direction="column" spacing={{ xs: 2, sm: 3 }}>
                 <PageTitle />
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
