@@ -1,17 +1,17 @@
+import * as React from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 const PageTitle = () => {
     const { t } = useTranslation()
 
     return (
-        <Box>
+        <React.Fragment>
             <Typography
                 sx={{
                     fontFamily: 'Anton',
-                    fontSize: { xs: '3rem', sm: '5rem' },
+                    fontSize: { xs: '2.5rem', sm: '5rem' },
                 }}
             >
                 {t('home.title')}
@@ -20,12 +20,12 @@ const PageTitle = () => {
                 sx={{
                     fontFamily: 'Poppins',
                     fontStyle: 'italic',
-                    fontSize: { xs: '1.5rem', sm: '3rem' },
+                    fontSize: { xs: '1.25rem', sm: '3rem' },
                 }}
             >
                 <Trans i18nKey="home.subtitle" components={{ s: <s /> }} />
             </Typography>
-        </Box>
+        </React.Fragment>
     )
 }
 

@@ -39,20 +39,20 @@ function App() {
                 <Container sx={{ height: '100%' }}>
                     <Toolbar />
                     <Routes>
+                        <Route exact path="program" element={<ProgramPage />} />
                         <Route
-                            path="gemeinsam/program"
-                            element={<ProgramPage />}
-                        />
-                        <Route
-                            path="gemeinsam/demo-blocks"
+                            exact
+                            path="demo-blocks"
                             element={<BlocksPage />}
                         />
                         <Route
-                            path="gemeinsam/demo-consensus"
+                            exact
+                            path="demo-consensus"
                             element={<ConsensusPage />}
                         />
                         <Route
-                            path="gemeinsam/legal-aid"
+                            exact
+                            path="legal-aid"
                             element={<LegalAidPage />}
                         />
                         <Route path="*" element={<HomePage />} />

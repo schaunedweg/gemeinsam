@@ -3,7 +3,6 @@ import { useTranslation, Trans } from 'react-i18next'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
 
 import Flyers from '../components/Flyers'
 import Footer from '../components/Footer'
@@ -20,11 +19,7 @@ const HomePage = () => {
                     {t('home.invite')}
                 </Typography>
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
-                    <PriorityHighIcon />
-                    <PriorityHighIcon />
                     {t('home.demo')}
-                    <PriorityHighIcon />
-                    <PriorityHighIcon />
                 </Typography>
                 <Typography variant="h5" sx={{ fontFamily: 'Archivo Black' }}>
                     {t('home.datetime')}

@@ -55,27 +55,27 @@ const DrawerAppBar = (props) => {
     const navItems = [
         {
             name: t('home.nav'),
-            onClick: () => navigate('gemeinsam'),
+            onClick: () => navigate('/'),
             icon: <HomeIcon />,
         },
         {
             name: t('consensus.nav'),
-            onClick: () => navigate('gemeinsam/demo-consensus'),
+            onClick: () => navigate('demo-consensus'),
             icon: <InfoIcon />,
         },
         {
             name: t('program.nav'),
-            onClick: () => navigate('gemeinsam/program'),
+            onClick: () => navigate('program'),
             icon: <SpeakerNotesIcon />,
         },
         {
             name: t('blocks.nav'),
-            onClick: () => navigate('gemeinsam/demo-blocks'),
+            onClick: () => navigate('demo-blocks'),
             icon: <GroupsIcon />,
         },
         {
             name: t('legal.nav'),
-            onClick: () => navigate('gemeinsam/legal-aid'),
+            onClick: () => navigate('legal-aid'),
             icon: <ReportProblemIcon />,
         },
     ]
