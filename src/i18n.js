@@ -3,7 +3,19 @@ import { initReactI18next } from 'react-i18next'
 
 import de from './locales/de/translation.json'
 import en from './locales/en/translation.json'
-import { defaultLocale } from './constants'
+
+export const locales = [
+    {
+        locale: 'en',
+        text: 'English',
+    },
+    {
+        locale: 'de',
+        text: 'Deutsch',
+    },
+]
+
+const defaultLocale = 'de'
 
 i18n.use(initReactI18next) // passes i18n down to react-i18next
     .init({

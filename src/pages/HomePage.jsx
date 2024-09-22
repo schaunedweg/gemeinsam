@@ -12,7 +12,7 @@ const HomePage = () => {
     const { t } = useTranslation()
 
     return (
-        <Box sx={{ py: { xs: 2, sm: 5 } }}>
+        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2 }}>
             <Stack direction="column" spacing={{ xs: 2, sm: 3 }}>
                 <PageTitle />
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
@@ -32,7 +32,10 @@ const HomePage = () => {
                     {t('home.location')}
                 </Typography>
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
-                    <Trans i18nKey="home.text" />
+                    <Trans
+                        i18nKey="home.text"
+                        tOptions={{ interpolation: { escapeValue: false } }}
+                    />
                 </Typography>
                 <Flyers />
             </Stack>

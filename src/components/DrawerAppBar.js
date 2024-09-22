@@ -10,13 +10,19 @@ import IconButton from '@mui/material/IconButton'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 
+import GroupsIcon from '@mui/icons-material/Groups'
+import HomeIcon from '@mui/icons-material/HomeOutlined'
+import InfoIcon from '@mui/icons-material/InfoOutlined'
 import MenuIcon from '@mui/icons-material/Menu'
+import ReportProblemIcon from '@mui/icons-material/ReportProblemOutlined'
+import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotesOutlined'
 
-import { locales } from '../constants'
+import { locales } from '../i18n'
 
 const drawerWidth = 240
 
@@ -50,30 +56,40 @@ const DrawerAppBar = (props) => {
         {
             name: t('home.nav'),
             onClick: () => navigate('gemeinsam'),
-        },
-        {
-            name: t('legal.nav'),
-            onClick: () => navigate('gemeinsam/legal-aid'),
+            icon: <HomeIcon />,
         },
         {
             name: t('consensus.nav'),
             onClick: () => navigate('gemeinsam/demo-consensus'),
+            icon: <InfoIcon />,
+        },
+        {
+            name: t('program.nav'),
+            onClick: () => navigate('gemeinsam/program'),
+            icon: <SpeakerNotesIcon />,
         },
         {
             name: t('blocks.nav'),
             onClick: () => navigate('gemeinsam/demo-blocks'),
+            icon: <GroupsIcon />,
+        },
+        {
+            name: t('legal.nav'),
+            onClick: () => navigate('gemeinsam/legal-aid'),
+            icon: <ReportProblemIcon />,
         },
     ]
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
             <List>
-                {navItems.map(({ name, onClick }) => (
+                {navItems.map(({ name, onClick, icon }) => (
                     <ListItem key={name} disablePadding>
                         <ListItemButton
                             onClick={onClick}
-                            sx={{ textAlign: 'center' }}
+                            sx={{ textAlign: 'left' }}
                         >
+                            <ListItemIcon>{icon}</ListItemIcon>
                             <ListItemText>
                                 <Typography
                                     variant="body1"
@@ -141,6 +157,7 @@ const DrawerAppBar = (props) => {
                         '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
                             width: drawerWidth,
+                            height: 'auto',
                         },
                     }}
                 >

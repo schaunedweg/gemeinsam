@@ -1,9 +1,9 @@
 import { useTranslation, Trans } from 'react-i18next'
 
-import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 
-const PageHeader = () => {
+const PageTitle = () => {
     const { t } = useTranslation()
 
     return (
@@ -29,4 +29,4 @@ const PageHeader = () => {
     )
 }
 
-export default PageHeader
+export default PageTitle

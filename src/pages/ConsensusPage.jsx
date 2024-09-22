@@ -10,14 +10,17 @@ const ConsensusPage = () => {
     const { t } = useTranslation()
 
     return (
-        <Box sx={{ py: { xs: 2, sm: 5 }, height: 'calc(100% - 104px)' }}>
-            <Stack direction="column" spacing={{ xs: 2, sm: 4 }}>
+        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2 }}>
+            <Stack direction="column" spacing={{ xs: 2, sm: 3 }}>
                 <PageTitle />
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
                     {t('consensus.title')}
                 </Typography>
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
-                    <Trans i18nKey="consensus.text" />
+                    <Trans
+                        i18nKey="consensus.text"
+                        tOptions={{ interpolation: { escapeValue: false } }}
+                    />
                 </Typography>
             </Stack>
         </Box>

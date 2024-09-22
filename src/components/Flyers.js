@@ -1,7 +1,14 @@
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 
-import { flyers } from '../constants'
+export const flyers = [
+    '/gemeinsam/flyers/Demo26_v1.PNG',
+    '/gemeinsam/flyers/Demo26_v2.PNG',
+    '/gemeinsam/flyers/Demo26_v3.PNG',
+    '/gemeinsam/flyers/Demo26_v4.PNG',
+    '/gemeinsam/flyers/Demo26_v5.PNG',
+    '/gemeinsam/flyers/Demo26_v6.PNG',
+]
 
 const Flyers = () => {
     return (

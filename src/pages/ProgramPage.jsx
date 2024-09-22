@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 
 import PageTitle from '../components/PageTitle'
 
-const BlocksPage = () => {
+const ProgramPage = () => {
     const { t } = useTranslation()
 
     return (
@@ -14,11 +14,11 @@ const BlocksPage = () => {
             <Stack direction="column" spacing={{ xs: 2, sm: 3 }}>
                 <PageTitle />
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
-                    {t('blocks.title')}
+                    {t('program.title')}
                 </Typography>
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
                     <Trans
-                        i18nKey="blocks.text"
+                        i18nKey="program.text"
                         tOptions={{ interpolation: { escapeValue: false } }}
                     />
                 </Typography>
@@ -27,4 +27,4 @@ const BlocksPage = () => {
     )
 }
 
-export default BlocksPage
+export default ProgramPage

@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
-import Toolbar from '@mui/material/Toolbar'
 
 import {
     createTheme,
@@ -11,10 +10,13 @@ import {
 
 import DrawerAppBar from './components/DrawerAppBar'
 
+import Toolbar from '@mui/material/Toolbar'
+
 import BlocksPage from './pages/BlocksPage'
 import ConsensusPage from './pages/ConsensusPage'
 import HomePage from './pages/HomePage'
 import LegalAidPage from './pages/LegalAidPage'
+import ProgramPage from './pages/ProgramPage'
 
 import Footer from './components/Footer'
 
@@ -41,8 +43,13 @@ function App() {
                     <Routes>
                         <Route
                             exact
-                            path="gemeinsam/legal-aid"
-                            element={<LegalAidPage />}
+                            path="gemeinsam/program"
+                            element={<ProgramPage />}
+                        />
+                        <Route
+                            exact
+                            path="gemeinsam/demo-blocks"
+                            element={<BlocksPage />}
                         />
                         <Route
                             exact
@@ -51,8 +58,8 @@ function App() {
                         />
                         <Route
                             exact
-                            path="gemeinsam/demo-blocks"
-                            element={<BlocksPage />}
+                            path="gemeinsam/legal-aid"
+                            element={<LegalAidPage />}
                         />
                         <Route path="*" element={<HomePage />} />
                     </Routes>

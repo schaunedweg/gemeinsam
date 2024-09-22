@@ -10,14 +10,17 @@ const LegalAidPage = () => {
     const { t } = useTranslation()
 
     return (
-        <Box sx={{ py: { xs: 2, sm: 5 } }}>
+        <Box sx={{ pt: { xs: 2, sm: 4 }, pb: 2, height: 'calc(100% - 104px)' }}>
+            <PageTitle />
             <Stack direction="column" spacing={{ xs: 2, sm: 4 }}>
-                <PageTitle />
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
                     {t('legal.title')}
                 </Typography>
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
-                    <Trans i18nKey="legal.text" />
+                    <Trans
+                        i18nKey="legal.text"
+                        tOptions={{ interpolation: { escapeValue: false } }}
+                    />
                 </Typography>
             </Stack>
         </Box>
