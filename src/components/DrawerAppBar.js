@@ -49,19 +49,19 @@ const DrawerAppBar = (props) => {
     const navItems = [
         {
             name: t('home.nav'),
-            onClick: () => navigate('/'),
+            onClick: () => navigate('gemeinsam'),
         },
         {
             name: t('legal.nav'),
-            onClick: () => navigate('/legal-aid'),
+            onClick: () => navigate('gemeinsam/legal-aid'),
         },
         {
             name: t('consensus.nav'),
-            onClick: () => navigate('/demo-consensus'),
+            onClick: () => navigate('gemeinsam/demo-consensus'),
         },
         {
             name: t('blocks.nav'),
-            onClick: () => navigate('/demo-blocks'),
+            onClick: () => navigate('gemeinsam/demo-blocks'),
         },
     ]
 

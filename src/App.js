@@ -41,17 +41,17 @@ function App() {
                     <Routes>
                         <Route
                             exact
-                            path="legal-aid"
+                            path="gemeinsam/legal-aid"
                             element={<LegalAidPage />}
                         />
                         <Route
                             exact
-                            path="demo-consensus"
+                            path="gemeinsam/demo-consensus"
                             element={<ConsensusPage />}
                         />
                         <Route
                             exact
-                            path="demo-blocks"
+                            path="gemeinsam/demo-blocks"
                             element={<BlocksPage />}
                         />
                         <Route path="*" element={<HomePage />} />
