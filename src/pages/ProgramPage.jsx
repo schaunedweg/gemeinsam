@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
+import DemoRoute from '../components/DemoRoute'
 import PageTitle from '../components/PageTitle'
 
 const ProgramPage = () => {
@@ -16,6 +17,7 @@ const ProgramPage = () => {
                 <Typography variant="h4" sx={{ fontFamily: 'Archivo Black' }}>
                     {t('program.title')}
                 </Typography>
+                <DemoRoute />
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
                     <Trans
                         i18nKey="program.text"

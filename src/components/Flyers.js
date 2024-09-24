@@ -23,8 +23,7 @@ const Flyers = () => {
                     <ImageListItem>
                         <img
                             srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                            src={`${item}?w=164&h=164&fit=crop&auto=format`}
-                            alt={'demo flyer'}
+                            alt="demo flyer"
                             loading="lazy"
                         />
                     </ImageListItem>

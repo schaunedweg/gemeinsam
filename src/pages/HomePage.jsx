@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
+import DemoRoute from '../components/DemoRoute'
 import Flyers from '../components/Flyers'
 import Footer from '../components/Footer'
 import PageTitle from '../components/PageTitle'
@@ -27,6 +28,7 @@ const HomePage = () => {
                 <Typography variant="h6" sx={{ fontFamily: 'Poppins' }}>
                     {t('home.location')}
                 </Typography>
+                <DemoRoute />
                 <Typography variant="body1" sx={{ fontFamily: 'Inconsolata' }}>
                     <Trans
                         i18nKey="home.text"
