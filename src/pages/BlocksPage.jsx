@@ -22,6 +22,20 @@ const BlocksPage = () => {
                         tOptions={{ interpolation: { escapeValue: false } }}
                     />
                 </Typography>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Typography
+                        variant="body1"
+                        textAlign="left"
+                        sx={{ fontFamily: 'Inconsolata' }}
+                    >
+                        <Trans
+                            i18nKey="blocks.blocks"
+                            tOptions={{
+                                interpolation: { escapeValue: false },
+                            }}
+                        />
+                    </Typography>
+                </Box>
             </Stack>
         </Box>
     )
